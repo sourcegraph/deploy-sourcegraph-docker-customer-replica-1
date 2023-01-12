@@ -8,4 +8,3 @@ cd "$root_dir"
 CONSTRAINT=$1
 
 go run ./tools/enforce-tags "$CONSTRAINT" ./pure-docker
-go run ./tools/enforce-tags "$CONSTRAINT" ./docker-compose

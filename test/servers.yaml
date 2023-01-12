@@ -9,5 +9,5 @@
   username: buildkite
   ssh_key_path: "~/.ssh/id_rsa"
   shell_commands:
-   - "/deploy-sourcegraph-docker/test/smoke-test.sh"
+   - "/deploy-sourcegraph-docker-customer-replica-1/test/smoke-test.sh"
 
