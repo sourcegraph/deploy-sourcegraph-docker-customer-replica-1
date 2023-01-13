@@ -1,19 +1,13 @@
 #!/usr/bin/env bash
 set -eufxo pipefail
 
-cd /deploy-sourcegraph-docker
+cd /deploy-sourcegraph-docker-customer-replica-1
 sudo su
 
 #Deploy sourcegraph
 ./deploy.sh
 
-if [[ "$GIT_BRANCH" == *"customer-replica"* ]]; then
-    # Expected number of containers on e.g. 3.18-customer-replica branch.
-    expect_containers="59"
-else
-    # Expected number of containers on `master` branch.
-    expect_containers="24"
-fi
+expect_containers="59"
 
 echo "Giving containers 10s to start..."
 sleep 10

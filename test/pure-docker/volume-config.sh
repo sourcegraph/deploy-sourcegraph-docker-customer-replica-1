@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Create volume directories.
-cd /deploy-sourcegraph-docker
+cd /deploy-sourcegraph-docker-customer-replica-1
 echo
 echo "creating deployment for volume directories"
 echo

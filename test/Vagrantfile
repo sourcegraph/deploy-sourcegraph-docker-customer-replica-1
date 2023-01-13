@@ -16,7 +16,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     config.env.enable
     config.vm.define server['name'] do |srv|
       srv.vm.box = server['box']
-      srv.vm.synced_folder '../', '/deploy-sourcegraph-docker'
+      srv.vm.synced_folder '../', '/deploy-sourcegraph-docker-customer-replica-1'
       srv.vm.boot_timeout = 600
 
       # Setup for CI or Local

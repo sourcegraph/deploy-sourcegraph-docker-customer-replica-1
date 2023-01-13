@@ -1,4 +1,4 @@
-module github.com/sourcegraph/deploy-sourcegraph-docker
+module github.com/sourcegraph/deploy-sourcegraph-docker-customer-replica-1
 
 go 1.15
 
