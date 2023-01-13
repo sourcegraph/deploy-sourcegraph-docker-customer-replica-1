@@ -10,6 +10,7 @@ source ./replicas.sh
 
 docker network create sourcegraph &>/dev/null || true
 
+./deploy-apache.sh
 ./deploy-node-exporter.sh
 ./deploy-cadvisor.sh
 ./deploy-github-proxy.sh
@@ -47,5 +48,4 @@ while [ "$(docker inspect sourcegraph-frontend-internal --format '{{.State.Healt
 done
 
 for i in $(seq 0 $(($NUM_FRONTEND - 1))); do ./deploy-frontend.sh $i; done
-./deploy-caddy.sh
 wait
