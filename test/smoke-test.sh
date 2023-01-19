@@ -4,21 +4,10 @@ set -euxfo pipefail
 deploy_sourcegraph() {
 	cd $(dirname "${BASH_SOURCE[0]}")/..
 	#Deploy sourcegraph
-	if [[ "$TEST_TYPE" == "pure-docker-test" ]]; then
-		./test/volume-config.sh
-		timeout 600s ./pure-docker/deploy.sh
+	./test/volume-config.sh
+	timeout 600s ./pure-docker/deploy.sh
 
-		if [[ "$GIT_BRANCH" == *"customer-replica"* ]]; then
-			# Expected number of containers on e.g. 3.18-customer-replica branch.
-			expect_containers="61"
-		else
-			# Expected number of containers on `master` branch.
-			expect_containers="26"
-		fi
-	elif [[ "$TEST_TYPE" == "docker-compose-test" ]]; then
-		docker-compose --file docker-compose/docker-compose.yaml up -d -t 600
-		expect_containers="27"
-	fi
+	expect_containers="61"
 
 	echo "Giving containers 90s to start..."
 	sleep 90
