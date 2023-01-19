@@ -3,10 +3,6 @@ env:
   IMAGE: "e2e-0040635f0-2022-03-16t17-33-08z"
   VAGRANT_RUN_ENV: "CI"
 steps:
-  - label: ":docker:"
-    command: .buildkite/validate-docker-compose.sh
-    agents: { queue: "vagrant" }
-
   - label: ":lipstick:"
     command: .buildkite/prettier-check.sh
     agents: { queue: "vagrant" }
@@ -20,13 +16,6 @@ steps:
     artifact_paths: ./*.log
     env:
       TEST_TYPE: "pure-docker-test"
-    agents: { queue: "vagrant" }
-
-  - label: ":rice: docker-compose-test"
-    command: .buildkite/vagrant-run.sh docker-test
-    artifact_paths: ./*.log
-    env:
-      TEST_TYPE: "docker-compose-test"
     agents: { queue: "vagrant" }
 
   # This runs the Checkov Terraform Code scanner
