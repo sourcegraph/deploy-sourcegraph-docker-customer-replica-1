@@ -8,6 +8,7 @@
   this repository. If uneeded, add link or explanation of why it is not needed here.
 -->
 * [ ] Sister [deploy-sourcegraph](https://github.com/sourcegraph/deploy-sourcegraph) change:
+* [ ] Sister [deploy-sourcegraph-docker](https://github.com/sourcegraph/deploy-sourcegraph-docker) change:
 * [ ] All images have a valid tag and SHA256 sum
 ### Test plan
 
