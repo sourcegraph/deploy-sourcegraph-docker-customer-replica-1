@@ -39,6 +39,7 @@ docker run --detach \
     -e GRAFANA_SERVER_URL=http://grafana:3370 \
     -e JAEGER_SERVER_URL=http://jaeger:16686 \
     -e GITHUB_BASE_URL=http://github-proxy:3180 \
+    -e EMBEDDINGS_URL=http://embeddings:9991 \
     -e PROMETHEUS_URL=http://prometheus:9090 \
     -e PRECISE_CODE_INTEL_UPLOAD_BACKEND=blobstore \
     -e PRECISE_CODE_INTEL_UPLOAD_AWS_ENDPOINT=http://blobstore:9000 \
