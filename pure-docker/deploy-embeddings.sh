@@ -23,6 +23,6 @@ docker run --detach \
     -e SRC_GIT_SERVERS="$(addresses "gitserver-" $NUM_GITSERVER ":3178")" \
     -e 'EMBEDDINGS_UPLOAD_BACKEND=blobstore' \
     -e 'EMBEDDINGS_UPLOAD_AWS_ENDPOINT=http://blobstore:9000' \
-    index.docker.io/sourcegraph/embeddings:5.0.5@sha256:09b92c6190aa495646a804847d0ad0dc24e884f40145f14c05230639d9d61cab
+    index.docker.io/sourcegraph/embeddings:5.0.6@sha256:3483db01119d553de0d851bca9f2103ca4b7f151bb315bf25df4c2393ac7aa15
 
 echo "Deployed embeddings service"
