@@ -37,7 +37,6 @@ docker run --detach \
     -e REPO_UPDATER_URL=http://repo-updater:3182 \
     -e GRAFANA_SERVER_URL=http://grafana:3000 \
     -e JAEGER_SERVER_URL=http://jaeger:16686 \
-    -e GITHUB_BASE_URL=http://github-proxy:3180 \
     -e PROMETHEUS_URL=http://prometheus:9090 \
     -e PRECISE_CODE_INTEL_UPLOAD_BACKEND=blobstore \
     -e PRECISE_CODE_INTEL_UPLOAD_AWS_ENDPOINT=http://blobstore:9000 \
