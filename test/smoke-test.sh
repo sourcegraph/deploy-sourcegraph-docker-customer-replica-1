@@ -7,7 +7,7 @@ deploy_sourcegraph() {
 	./test/volume-config.sh
 	timeout 600s ./pure-docker/deploy.sh
 
-	expect_containers="61"
+	expect_containers="60"
 
 	echo "Giving containers 90s to start..."
 	sleep 90
