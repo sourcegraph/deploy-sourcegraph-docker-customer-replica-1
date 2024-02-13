@@ -41,6 +41,6 @@ docker run --detach \
     -e PRECISE_CODE_INTEL_UPLOAD_BACKEND=blobstore \
     -e PRECISE_CODE_INTEL_UPLOAD_AWS_ENDPOINT=http://blobstore:9000 \
     -v $VOLUME:/mnt/cache \
-    index.docker.io/sourcegraph/frontend:4.4.0@sha256:403c76413df819964e9eb2762ff2ff73a901718a28e0546475d0293a18d5dea5
+    index.docker.io/sourcegraph/frontend:5.3.0@sha256:ec5a76c839181edd313e30adcd26c324e97646cf580915308605d377d1a5030b
 
 echo "Deployed sourcegraph-frontend-internal service"
