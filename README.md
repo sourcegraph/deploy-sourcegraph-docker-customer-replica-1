@@ -23,3 +23,4 @@ Kubernetes is easy later.
 ## Is the Docker (Customer Replica 1) deployment type for me?
 
 No. Please see our [docs](https://docs.sourcegraph.com/admin/deploy) for a variety of installation methods that will suit your needs, or [learn more about Sourcegraph Cloud](https://about.sourcegraph.com/).
+Hello World
