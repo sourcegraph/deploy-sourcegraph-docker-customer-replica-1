@@ -32,7 +32,6 @@ docker run --detach \
     -e SRC_GIT_SERVERS="$(addresses "gitserver-" $NUM_GITSERVER ":3178")" \
     -e SRC_SYNTECT_SERVER=http://syntect-server:9238 \
     -e SEARCHER_URL="$(addresses "http://searcher-" $NUM_SEARCHER ":3181")" \
-    -e SYMBOLS_URL="$(addresses "http://symbols-" $NUM_SYMBOLS ":3184")" \
     -e INDEXED_SEARCH_SERVERS="$(addresses "zoekt-webserver-" $NUM_INDEXED_SEARCH ":6070")" \
     -e SRC_FRONTEND_INTERNAL=sourcegraph-frontend-internal:3090 \
     -e REPO_UPDATER_URL=http://repo-updater:3182 \
@@ -45,7 +44,7 @@ docker run --detach \
     -p 0.0.0.0:$((3080 + $1)):3080 \
     index.docker.io/sourcegraph/frontend:4.4.0@sha256:403c76413df819964e9eb2762ff2ff73a901718a28e0546475d0293a18d5dea5
 
-# Note: SRC_GIT_SERVERS, SEARCHER_URL, and SYMBOLS_URL are space-separated
+# Note: SRC_GIT_SERVERS, and SEARCHER_URL are space-separated
 # lists which each allow you to specify more container instances for scaling
 # purposes. Be sure to also apply such a change here to the frontend-internal
 # service.
